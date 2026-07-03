@@ -218,7 +218,7 @@ fn entry() -> Result<(), ()> {
             let address = args.next().unwrap_or("127.0.0.1:6969".to_string());
 
             let exists = Path::new(index_path).try_exists().map_err(|err| {
-                eprintln!("ERROR: could nit check the existence of file {index_path}: {err}");
+                eprintln!("ERROR: could not check the existence of file {index_path}: {err}");
             })?;
 
             let model: Arc<Mutex<InMemoryModel>>;

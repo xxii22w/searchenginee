@@ -146,7 +146,7 @@ impl Model for SqliteModel {
             // DocFreq
             {
                 let freq = {
-                    let query = "SELECT freq FROM DocFreq WHERE term = :tern";
+                    let query = "SELECT freq FROM DocFreq WHERE term = :term";
                     let log_err = |err| {
                         eprintln!("ERROR: Could not execute query {query}: {err}");
                     };
